@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script>
+            ;(function (d) {
+                var config = {
+                        kitId: 'hna4ofw',
+                        scriptTimeout: 3000,
+                        async: true
+                    },
+                    h = d.documentElement,
+                    t = setTimeout(function () {
+                        h.className =
+                            h.className.replace(/\bwf-loading\b/g, '') +
+                            ' wf-inactive'
+                    }, config.scriptTimeout),
+                    tk = d.createElement('script'),
+                    f = false,
+                    s = d.getElementsByTagName('script')[0],
+                    a
+                h.className += ' wf-loading'
+                tk.src = 'https://use.typekit.net/' + config.kitId + '.js'
+                tk.async = true
+                tk.onload = tk.onreadystatechange = function () {
+                    a = this.readyState
+                    if (f || (a && a != 'complete' && a != 'loaded')) return
+                    f = true
+                    clearTimeout(t)
+                    try {
+                        Typekit.load(config)
+                    } catch (e) {}
+                }
+                s.parentNode.insertBefore(tk, s)
+            })(document)
+        </script>
+        <title>Pretty Liarと私</title>
+    </head>
+    <body id="home">
+        <div class="vertical-frame left">
+            <div id="light"></div>
+            <div id="light"></div>
+            <div id="light"></div>
+            <div id="light"></div>
+        </div>
+        <div class="vertical-frame right">
+            <div id="light"></div>
+            <div id="light"></div>
+            <div id="light"></div>
+            <div id="light"></div>
+        </div>
+        <div id="items">
+            <img src="./images/makebox.png" alt="makebox" />
+        </div>
+        <header>
+            <h1>
+                <span>イベント「Pretty Liar」4周年記念非公式企画</span>
+                <img
+                    src="./images/logo_PrettiLiarAndMe.png"
+                    alt="Pretty Liarと私"
+                />
+            </h1>
+        </header>
+        <main>
+            <nav>
+                <ul>
+                    <li><a href="#home">ホーム</a></li>
+                    <li><a href="#about">企画概要</a></li>
+                    <li><a href="#recruiting">募集要項</a></li>
+                    <li><a href="#member">参加者一覧</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <section>
+                <h2 id="about">企画概要</h2>
+                <p>
+                    この企画は、2018年にイベント「Pretty
+                    Liar」が開催されていた9日間、「私とPretty
+                    Liar」というテーマに沿った文章をアドベントカレンダー形式で公開する非公式企画です。
+                </p>
+                <p>
+                    イベント「Pretty
+                    Liar」が開催されていた9/19〜27までの9日間、1日につき参加者1人の「私とPretty
+                    Liar」をテーマにした作品(ブログ記事等)を公開し、みんなで当時の思い出を振り返るなど、ミステリアスアイズを盛り上げる一助としたいと考えています。
+                </p>
+            </section>
+            <section>
+                <h2 id="recruiting">募集要項</h2>
+                <p>
+                    「私とPretty Liar」をテーマに、ブログ等でPretty
+                    Liarに関する思い出などを語ってくださる方を募集します。<br />
+                    <strong
+                        >9人以上になっても構いませんのでご応募歓迎です(1日に2人の方に記事を公開していただくことになります)。</strong
+                    ><br />
+                    テーマに沿った内容の例としては、イベラン回顧、楽曲との思い出、コミュについて、Pretty
+                    Liarコミュに登場する他アイドルとミステリアスアイズとの関係性について、ミステリアスアイズにまつわる事柄等、幅広く解釈していただいて構いません。
+                </p>
+                <p>
+                    参加をご希望いただける方は、Twitterにて主催・<a
+                        href="https://twitter.com/kanadechankawai"
+                        target="_blank"
+                        >はやかわめぐる</a
+                    >までご連絡ください。
+                </p>
+            </section>
+            <section>
+                <h2 id="member">参加者一覧</h2>
+                <ul>
+                    <li>はやかわめぐる</li>
+                </ul>
+                <p>... and more!</p>
+            </section>
+            <section>
+                <h2 id="contact">お問い合わせ</h2>
+                <p>
+                    この企画はDiscordサーバー「ミステリアスアイズを囲む会」の企画・運営でお送りしています。<br />
+                    当サーバーにご興味を持たれた方はTwitterにて<a
+                        href="https://twitter.com/kanadechankawai"
+                        target="_blank"
+                        >はやかわめぐる</a
+                    >までご連絡ください。
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
