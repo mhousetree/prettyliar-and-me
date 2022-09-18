@@ -203,4 +203,11 @@ h2 {
     main {
         padding: 0 50px;
     }
+
+    @for $i from 1 through 4 {
+        #light:nth-child(#{$i})::before,
+        #light:nth-child(#{$i})::after {
+            animation: none;
+        }
+    }
 }

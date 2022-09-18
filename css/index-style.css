@@ -222,6 +222,26 @@ h2 {
   main {
     padding: 0 50px;
   }
+  #light:nth-child(1)::before,
+#light:nth-child(1)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(2)::before,
+#light:nth-child(2)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(3)::before,
+#light:nth-child(3)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(4)::before,
+#light:nth-child(4)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 nav {
   display: flex;
