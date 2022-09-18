@@ -6,6 +6,7 @@
 
 ul {
   padding: 0 2rem;
+  margin-bottom: 0.5rem;
 }
 
 a {
@@ -14,6 +15,14 @@ a {
 
 p {
   margin-bottom: 0.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+.mb-1rem {
+  margin-bottom: 1rem;
 }
 
 html {
@@ -25,61 +34,12 @@ body {
   margin: 0;
   font-family: "kozuka-gothic-pr6n", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 200;
   background-color: #4f0c1f;
   color: #f0f8e5;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  font-weight: 500;
-  margin: 3rem 0;
-}
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-}
-nav ul a {
-  display: block;
-  text-decoration: none;
-  position: relative;
-  padding: 0 0.5rem;
-  transition: 0.2s;
-}
-nav ul a::before {
-  position: absolute;
-  content: "";
-  width: 0%;
-  height: 100%;
-  left: 100%;
-  background-color: #f0f8e5;
-  mix-blend-mode: darken;
-  transition: 0.2s;
-}
-nav ul a:hover {
-  color: #4f0c1f;
-}
-nav ul a:hover::before {
-  left: -0.05rem;
-  width: 100%;
-}
-
-#items {
-  position: fixed;
-  z-index: 2;
-  bottom: -50px;
-  left: 10%;
-  display: flex;
-  width: 100%;
-}
-#items img:first-child {
-  width: 200px;
 }
 
 header {
@@ -93,45 +53,10 @@ main {
   width: min(800px, 90%);
   padding: 0 80px 120px;
 }
-main::before {
-  position: fixed;
-  content: "";
-  width: 100%;
-  height: 10rem;
-  left: 0;
-  bottom: 0;
-  background: linear-gradient(to top, #4f0c1f, transparent);
-}
 
-.wf-active header {
-  -webkit-animation: opacity0-1 0.7s ease-in-out 0.4s 1 normal both;
-          animation: opacity0-1 0.7s ease-in-out 0.4s 1 normal both;
-}
-
-.wf-active main {
-  -webkit-animation: opacity0-1 0.7s ease-in-out 0.6s 1 normal both;
-          animation: opacity0-1 0.7s ease-in-out 0.6s 1 normal both;
-}
-
-@-webkit-keyframes opacity0-1 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opacity0-1 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-section {
-  margin-bottom: 5rem;
+h1,
+h2 {
+  font-weight: 400;
 }
 
 h1 {
@@ -151,10 +76,6 @@ h1 img {
 }
 
 h2 {
-  text-align: center;
-  font-weight: 200;
-  letter-spacing: 1rem;
-  font-style: normal;
   margin-bottom: 1rem;
 }
 
@@ -206,11 +127,6 @@ h2 {
   transform: rotate(-45deg) scaleY(30%) rotate(-45deg);
 }
 
-#light:nth-child(1) {
-  -webkit-animation: opacity0-1 0.2s ease-in-out 0.1s 1 normal both;
-          animation: opacity0-1 0.2s ease-in-out 0.1s 1 normal both;
-}
-
 #light:nth-child(1)::before,
 #light:nth-child(1)::after {
   -webkit-animation: light-blink 2s ease-in-out 1s infinite alternate both;
@@ -233,11 +149,6 @@ h2 {
   }
 }
 
-#light:nth-child(2) {
-  -webkit-animation: opacity0-1 0.2s ease-in-out 0.2s 1 normal both;
-          animation: opacity0-1 0.2s ease-in-out 0.2s 1 normal both;
-}
-
 #light:nth-child(2)::before,
 #light:nth-child(2)::after {
   -webkit-animation: light-blink 2s ease-in-out 2s infinite alternate both;
@@ -252,11 +163,6 @@ h2 {
   }
 }
 
-#light:nth-child(3) {
-  -webkit-animation: opacity0-1 0.2s ease-in-out 0.3s 1 normal both;
-          animation: opacity0-1 0.2s ease-in-out 0.3s 1 normal both;
-}
-
 #light:nth-child(3)::before,
 #light:nth-child(3)::after {
   -webkit-animation: light-blink 2s ease-in-out 3s infinite alternate both;
@@ -269,11 +175,6 @@ h2 {
   to {
     opacity: 0.8;
   }
-}
-
-#light:nth-child(4) {
-  -webkit-animation: opacity0-1 0.2s ease-in-out 0.4s 1 normal both;
-          animation: opacity0-1 0.2s ease-in-out 0.4s 1 normal both;
 }
 
 #light:nth-child(4)::before,

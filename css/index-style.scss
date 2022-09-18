@@ -1,0 +1,159 @@
+@import './style.scss';
+
+nav {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    margin: 3rem 0;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+
+        a {
+            font-weight: 400;
+            display: block;
+            text-decoration: none;
+            position: relative;
+            padding: 0 0.5rem;
+            transition: 0.2s;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 0%;
+                height: 100%;
+                left: 100%;
+                background-color: $main-text-color;
+                mix-blend-mode: darken;
+                transition: 0.2s;
+            }
+
+            &:hover {
+                color: $main-bg-color;
+
+                &::before {
+                    left: -0.05rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.wf-active header {
+    animation: opacity0-1 0.7s ease-in-out 0.4s 1 normal both;
+}
+
+.wf-active main {
+    animation: opacity0-1 0.7s ease-in-out 0.6s 1 normal both;
+}
+
+@keyframes opacity0-1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main::before {
+    position: fixed;
+    content: '';
+    width: 100%;
+    height: 10rem;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top, $main-bg-color, transparent);
+}
+
+section {
+    margin-bottom: 5rem;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 1rem;
+}
+
+#items {
+    position: fixed;
+    z-index: 2;
+    bottom: -50px;
+    left: 10%;
+    display: flex;
+    width: 100%;
+
+    img:first-child {
+        width: 200px;
+    }
+}
+
+@for $i from 1 through 4 {
+    #light:nth-child(#{$i}) {
+        animation: opacity0-1 0.2s ease-in-out #{0.1 * $i}s 1 normal both;
+    }
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 4px;
+
+    > div {
+        padding: 0.3rem 0 0.5rem;
+        border-radius: 4px;
+        background-color: rgba($color: $main-text-color, $alpha: 0.2);
+        border: 1px solid rgba($color: $main-text-color, $alpha: 0.1);
+        box-shadow: 0 4px 10px #00000055;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: rgba($color: $main-text-color, $alpha: 0.3);
+            box-shadow: 0 6px 20px #00000022;
+            transform: translateY(-2px);
+        }
+
+        &::before {
+            font-weight: 400;
+        }
+
+        &:nth-child(6)::before {
+            color: cornflowerblue;
+        }
+        &:nth-child(5)::before,
+        &:nth-child(7)::before {
+            color: crimson;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon {
+            margin: 0 auto 0.5rem;
+            border-radius: 50%;
+            width: 60%;
+            aspect-ratio: 1 / 1;
+            background-color: $main-text-color;
+        }
+    }
+
+    @for $j from 1 through 9 {
+        > div:nth-child(#{$j})::before {
+            content: '#{$j + 18}';
+        }
+    }
+
+    p {
+        line-height: 1.2;
+        font-size: 0.6rem;
+    }
+}
