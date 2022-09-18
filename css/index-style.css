@@ -191,6 +191,38 @@ h2 {
   }
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 13px;
+  }
+  .vertical-frame.left {
+    left: -10px;
+  }
+  .vertical-frame.right {
+    right: -10px;
+  }
+  nav ul {
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    flex-direction: column-reverse;
+  }
+  nav ul .rotate90 {
+    display: inline-block;
+    transform: translateX(-1px) rotate(90deg);
+  }
+  nav ul a::before {
+    height: 120% !important;
+  }
+  nav ul a:hover::before {
+    top: -0.5rem;
+  }
+  h1 span {
+    font-size: 0.7rem;
+  }
+  main {
+    padding: 0 50px;
+  }
+}
 nav {
   display: flex;
   justify-content: center;
@@ -406,4 +438,32 @@ h2 {
 #calendar p {
   line-height: 1.2;
   font-size: 0.6rem;
+}
+
+@media screen and (max-width: 800px) {
+  main::before {
+    display: none;
+  }
+  #items {
+    display: none;
+  }
+  #calendar {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  #calendar > div {
+    display: flex;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #calendar > div .icon {
+    width: 20%;
+    margin: 0;
+  }
+  #calendar > div p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=index-style.css.map */

@@ -165,3 +165,42 @@ h2 {
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 13px;
+    }
+
+    .vertical-frame.left {
+        left: -10px;
+    }
+    .vertical-frame.right {
+        right: -10px;
+    }
+
+    nav ul {
+        writing-mode: vertical-rl;
+        flex-direction: column-reverse;
+
+        .rotate90 {
+            display: inline-block;
+            transform: translateX(-1px) rotate(90deg);
+        }
+
+        a::before {
+            height: 120% !important;
+        }
+
+        a:hover::before {
+            top: -0.5rem;
+        }
+    }
+
+    h1 span {
+        font-size: 0.7rem;
+    }
+
+    main {
+        padding: 0 50px;
+    }
+}

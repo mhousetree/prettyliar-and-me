@@ -186,3 +186,36 @@ h2 {
         font-size: 0.6rem;
     }
 }
+
+@media screen and (max-width: 800px) {
+    main::before {
+        display: none;
+    }
+
+    #items {
+        display: none;
+    }
+
+    #calendar {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+
+        > div {
+            display: flex;
+            padding: 0.5rem;
+            gap: 0.5rem;
+            justify-content: flex-start;
+            align-items: center;
+
+            .icon {
+                width: 20%;
+                margin: 0;
+            }
+
+            p {
+                font-size: 13px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
