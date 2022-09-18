@@ -143,6 +143,35 @@ h2 {
             width: 60%;
             aspect-ratio: 1 / 1;
             background-color: $main-text-color;
+            background-size: cover;
+        }
+
+        &:nth-child(1) .icon {
+            background-image: url(../images/1_frame.jpg);
+        }
+        &:nth-child(2) .icon {
+            background-image: url(../images/2_candle.jpg);
+        }
+        &:nth-child(3) .icon {
+            background-image: url(../images/3_mask.jpg);
+        }
+        &:nth-child(4) .icon {
+            background-image: url(../images/4_key.jpg);
+        }
+        &:nth-child(5) .icon {
+            background-image: url(../images/5_box.jpg);
+        }
+        &:nth-child(6) .icon {
+            background-image: url(../images/6_hourglass.jpg);
+        }
+        &:nth-child(7) .icon {
+            background-image: url(../images/7_lily.jpg);
+        }
+        &:nth-child(8) .icon {
+            background-image: url(../images/8_lip.jpg);
+        }
+        &:nth-child(9) .icon {
+            background-image: url(../images/9_butterfly.jpg);
         }
     }
 

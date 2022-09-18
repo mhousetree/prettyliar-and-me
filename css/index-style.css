@@ -347,6 +347,34 @@ h2 {
   width: 60%;
   aspect-ratio: 1/1;
   background-color: #f0f8e5;
+  background-size: cover;
+}
+#calendar > div:nth-child(1) .icon {
+  background-image: url(../images/1_frame.jpg);
+}
+#calendar > div:nth-child(2) .icon {
+  background-image: url(../images/2_candle.jpg);
+}
+#calendar > div:nth-child(3) .icon {
+  background-image: url(../images/3_mask.jpg);
+}
+#calendar > div:nth-child(4) .icon {
+  background-image: url(../images/4_key.jpg);
+}
+#calendar > div:nth-child(5) .icon {
+  background-image: url(../images/5_box.jpg);
+}
+#calendar > div:nth-child(6) .icon {
+  background-image: url(../images/6_hourglass.jpg);
+}
+#calendar > div:nth-child(7) .icon {
+  background-image: url(../images/7_lily.jpg);
+}
+#calendar > div:nth-child(8) .icon {
+  background-image: url(../images/8_lip.jpg);
+}
+#calendar > div:nth-child(9) .icon {
+  background-image: url(../images/9_butterfly.jpg);
 }
 #calendar > div:nth-child(1)::before {
   content: "19";
