@@ -126,6 +126,8 @@ h2 {
         &:nth-child(6)::before {
             color: cornflowerblue;
         }
+
+        &:nth-child(1)::before,
         &:nth-child(5)::before,
         &:nth-child(7)::before {
             color: crimson;
