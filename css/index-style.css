@@ -478,6 +478,11 @@ h2 {
     justify-content: flex-start;
     align-items: center;
   }
+  #calendar > div a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
   #calendar > div .icon {
     width: 20%;
     margin: 0;

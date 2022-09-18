@@ -191,6 +191,58 @@ h2 {
   }
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 13px;
+  }
+  .vertical-frame.left {
+    left: -10px;
+  }
+  .vertical-frame.right {
+    right: -10px;
+  }
+  nav ul {
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    flex-direction: column-reverse;
+  }
+  nav ul .rotate90 {
+    display: inline-block;
+    transform: translateX(-1px) rotate(90deg);
+  }
+  nav ul a::before {
+    height: 120% !important;
+  }
+  nav ul a:hover::before {
+    top: -0.5rem;
+  }
+  h1 span {
+    font-size: 0.7rem;
+  }
+  main {
+    padding: 0 50px;
+  }
+  #light:nth-child(1)::before,
+#light:nth-child(1)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(2)::before,
+#light:nth-child(2)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(3)::before,
+#light:nth-child(3)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(4)::before,
+#light:nth-child(4)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
 header h1 {
   text-align: center;
   margin-bottom: 5rem;
@@ -267,4 +319,31 @@ section {
   display: flex;
   gap: 1rem;
   justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  header h1 {
+    margin-bottom: 2rem;
+  }
+  header h1 img {
+    width: min(80%, 400px);
+  }
+  main {
+    padding: 0 10px 50px;
+  }
+  main h1 {
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+  }
+  main h2 {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  main section {
+    margin-bottom: 2rem;
+  }
+  main ul {
+    padding: 0;
+    padding-left: 1rem;
+  }
 }/*# sourceMappingURL=content-style.css.map */
