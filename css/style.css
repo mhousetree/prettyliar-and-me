@@ -189,4 +189,57 @@ h2 {
   to {
     opacity: 0.8;
   }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 13px;
+  }
+  .vertical-frame.left {
+    left: -10px;
+  }
+  .vertical-frame.right {
+    right: -10px;
+  }
+  nav ul {
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    flex-direction: column-reverse;
+  }
+  nav ul .rotate90 {
+    display: inline-block;
+    transform: translateX(-1px) rotate(90deg);
+  }
+  nav ul a::before {
+    height: 120% !important;
+  }
+  nav ul a:hover::before {
+    top: -0.5rem;
+  }
+  h1 span {
+    font-size: 0.7rem;
+  }
+  main {
+    padding: 0 50px;
+  }
+  #light:nth-child(1)::before,
+#light:nth-child(1)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(2)::before,
+#light:nth-child(2)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(3)::before,
+#light:nth-child(3)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(4)::before,
+#light:nth-child(4)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
 }/*# sourceMappingURL=style.css.map */

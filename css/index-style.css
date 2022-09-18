@@ -191,6 +191,58 @@ h2 {
   }
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 13px;
+  }
+  .vertical-frame.left {
+    left: -10px;
+  }
+  .vertical-frame.right {
+    right: -10px;
+  }
+  nav ul {
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    flex-direction: column-reverse;
+  }
+  nav ul .rotate90 {
+    display: inline-block;
+    transform: translateX(-1px) rotate(90deg);
+  }
+  nav ul a::before {
+    height: 120% !important;
+  }
+  nav ul a:hover::before {
+    top: -0.5rem;
+  }
+  h1 span {
+    font-size: 0.7rem;
+  }
+  main {
+    padding: 0 50px;
+  }
+  #light:nth-child(1)::before,
+#light:nth-child(1)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(2)::before,
+#light:nth-child(2)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(3)::before,
+#light:nth-child(3)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #light:nth-child(4)::before,
+#light:nth-child(4)::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
 nav {
   display: flex;
   justify-content: center;
@@ -333,7 +385,7 @@ h2 {
 #calendar > div:nth-child(6)::before {
   color: cornflowerblue;
 }
-#calendar > div:nth-child(5)::before, #calendar > div:nth-child(7)::before {
+#calendar > div:nth-child(1)::before, #calendar > div:nth-child(5)::before, #calendar > div:nth-child(7)::before {
   color: crimson;
 }
 #calendar > div a {
@@ -347,6 +399,34 @@ h2 {
   width: 60%;
   aspect-ratio: 1/1;
   background-color: #f0f8e5;
+  background-size: cover;
+}
+#calendar > div:nth-child(1) .icon {
+  background-image: url(../images/1_frame.jpg);
+}
+#calendar > div:nth-child(2) .icon {
+  background-image: url(../images/2_candle.jpg);
+}
+#calendar > div:nth-child(3) .icon {
+  background-image: url(../images/3_mask.jpg);
+}
+#calendar > div:nth-child(4) .icon {
+  background-image: url(../images/4_key.jpg);
+}
+#calendar > div:nth-child(5) .icon {
+  background-image: url(../images/5_box.jpg);
+}
+#calendar > div:nth-child(6) .icon {
+  background-image: url(../images/6_hourglass.jpg);
+}
+#calendar > div:nth-child(7) .icon {
+  background-image: url(../images/7_lily.jpg);
+}
+#calendar > div:nth-child(8) .icon {
+  background-image: url(../images/8_lip.jpg);
+}
+#calendar > div:nth-child(9) .icon {
+  background-image: url(../images/9_butterfly.jpg);
 }
 #calendar > div:nth-child(1)::before {
   content: "19";
@@ -378,4 +458,32 @@ h2 {
 #calendar p {
   line-height: 1.2;
   font-size: 0.6rem;
+}
+
+@media screen and (max-width: 800px) {
+  main::before {
+    display: none;
+  }
+  #items {
+    display: none;
+  }
+  #calendar {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  #calendar > div {
+    display: flex;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #calendar > div .icon {
+    width: 20%;
+    margin: 0;
+  }
+  #calendar > div p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=index-style.css.map */
